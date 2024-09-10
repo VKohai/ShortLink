@@ -45,8 +45,7 @@ public class ShortLinkController(ShortLinkRepository repos) : ControllerBase
             var urlMapper = new UrlMapper
             {
                 OriginalUrl = link,
-                Guid = ShortLinkService.GenerateShortUrl(),
-                Views = 0
+                Guid = ShortLinkService.GenerateShortUrl()
             };
 
             await _repository.AddAsync(urlMapper);
