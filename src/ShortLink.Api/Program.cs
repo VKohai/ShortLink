@@ -45,12 +45,8 @@ app.UseHttpsRedirection();
 app.UseRouting();
 app.UseCors();
 
-//app.MapGet("/{user}", async (HttpContext context, [FromServices] ShortLinkRepository repos)
-//    => context.Response.Redirect("https://github.com/VKohai/VKohai"));
-
-
-app.MapGet(pattern: "/{guid}", handler:
-    [EnableCors("AnyOrigin")]
+app.MapGet(pattern: "/{guid}",
+    handler: [EnableCors("AnyOrigin")]
 async (HttpContext context, [FromServices] ShortLinkRepository repos) =>
     {
         var guid = context.Request.RouteValues["guid"]?.ToString();

@@ -1,20 +1,18 @@
 ﻿using Microsoft.AspNetCore.Cors;
-using Microsoft.AspNetCore.Http;
 using Microsoft.AspNetCore.Mvc;
-using Microsoft.EntityFrameworkCore;
 
 namespace ShortLink.Api.Controllers;
 
 [Route("api/[controller]")]
 [ApiController]
+[EnableCors("AnyOrigin")]
 public class ShortLinkController(ShortLinkRepository repos) : ControllerBase
 {
     private readonly ShortLinkRepository _repository = repos;
 
     /// <param name="guid">Path code of the link (without domain)</param>
-    [HttpGet]
-    [EnableCors("AnyOrigin")]
-    public async Task<ActionResult<UrlMapper>> Get([FromQuery] string guid)
+    [HttpGet("{guid}")]
+    public async Task<ActionResult<UrlMapperDTO>> Get(string guid)
     {
         try
         {
@@ -37,8 +35,7 @@ public class ShortLinkController(ShortLinkRepository repos) : ControllerBase
     }
 
     [HttpPost]
-    [EnableCors("AnyOrigin")]
-    public async Task<ActionResult<string?>> Post([FromBody] string link)
+    public async Task<ActionResult<UrlMapperDTO?>> Post([FromBody] string link)
     {
         try
         {

@@ -7,8 +7,6 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{0C44CCE0-BC8
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortLink.Api", "src\ShortLink.Api\ShortLink.Api.csproj", "{FD70DE6B-A344-4D27-A831-55EAAB4CE55C}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "ShortLink.Shared", "src\ShortLink.Shared\ShortLink.Shared.csproj", "{011ACA11-3A07-43BF-80DE-6A6C5C34FE31}"
-EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -19,17 +17,12 @@ Global
 		{FD70DE6B-A344-4D27-A831-55EAAB4CE55C}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{FD70DE6B-A344-4D27-A831-55EAAB4CE55C}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{FD70DE6B-A344-4D27-A831-55EAAB4CE55C}.Release|Any CPU.Build.0 = Release|Any CPU
-		{011ACA11-3A07-43BF-80DE-6A6C5C34FE31}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{011ACA11-3A07-43BF-80DE-6A6C5C34FE31}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{011ACA11-3A07-43BF-80DE-6A6C5C34FE31}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{011ACA11-3A07-43BF-80DE-6A6C5C34FE31}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
 	EndGlobalSection
 	GlobalSection(NestedProjects) = preSolution
 		{FD70DE6B-A344-4D27-A831-55EAAB4CE55C} = {0C44CCE0-BC83-4F22-A283-0EA9B695491F}
-		{011ACA11-3A07-43BF-80DE-6A6C5C34FE31} = {0C44CCE0-BC83-4F22-A283-0EA9B695491F}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {210DE1B3-C78B-479A-8464-0DB8919DDA25}
